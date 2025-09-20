@@ -12,10 +12,10 @@ function appendMessage(text, type) {
   chatWindow.scrollTop = chatWindow.scrollHeight;
 }
   function botReply(userMsg) {
-    let reply = "ขอโทษครับ ฉันยังไม่เข้าใจ";
-    if (/สวัสดี/i.test(userMsg)) reply = "สวัสดีครับ มีอะไรให้ช่วยมั้ย?";
+    let reply = "ขอโทษครับ ยังไม่มีข้อมูลในขณะนี้โปรดรอทางวิทยาลัยอัปเดตข้อมูลครับ";
+    if (/สวัสดี/i.test(userMsg)) reply = "สวัสดีครับ มีอะไรให้ช่วยมั้ยครับ?";
     if (/สมัคร|รับสมัคร/i.test(userMsg)) reply = "ตอนนี้เปิดรับสมัคร 1 ต.ค. 2568 เป็นต้นไปครับ";
-    if (/เวลา|เปิด|ปิด/i.test(userMsg)) reply = "เปิดทำการ จันทร์–ศุกร์ 8:30–16:30 ครับ";
+    if (/เวลา|เปิด|ปิด/i.test(userMsg)) reply = "เปิดทำการ จันทร์–ศุกร์ 8:00–16:00 ครับ";
     if (/ติดต่อ/i.test(userMsg)) reply = "ติดต่อได้ที่เบอร์ 02-123-4567 หรืออีเมล info@college.ac.th";
     return reply;
   }
@@ -36,3 +36,4 @@ sendBtn?.addEventListener("click", () => {
     if (e.key === "Enter") sendBtn.click();
   });
 });
+
